@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мої предмети</title>
+  <!-- Іконка вшита в сторінку: інакше браузер сам піде по /favicon.ico і зловить 404. -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.92em' font-size='92'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #f5f8f6;
+      --bg-soft: #ffffff;
+      --text: #1c2430;
+      --text-dim: #5b6678;
+      --border: #dde5e2;
+      --shadow: 0 8px 24px rgba(28, 36, 48, .10);
+      /* Колір кожного курсу — з його власної шапки. */
+      --geo: #1f7a5a;
+      --pry: #b8860b;
+      --math: #4b2e83;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141a19;
+        --bg-soft: #1b2322;
+        --text: #e8eeea;
+        --text-dim: #a2aeb0;
+        --border: #2b3533;
+        --shadow: 0 8px 24px rgba(0, 0, 0, .35);
+        --geo: #5cc79c;
+        --pry: #e3bb4c;
+        --math: #b49be6;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.55 "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 16px 80px;
+    }
+
+    h1 { font-size: 32px; margin: 0 0 6px; line-height: 1.2; }
+    .lead { color: var(--text-dim); margin: 0 0 28px; }
+
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .subject {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      height: 100%;
+      padding: 20px 20px 18px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-top: 5px solid var(--c);
+      border-radius: 14px;
+      color: inherit;
+      text-decoration: none;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+
+    .subject:hover,
+    .subject:focus-visible { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+    .subject .icon { font-size: 40px; line-height: 1; }
+    .subject .name { font-size: 21px; font-weight: 700; color: var(--c); }
+    .subject .about { color: var(--text-dim); font-size: 15px; flex: 1; }
+    .subject .go { font-weight: 600; color: var(--c); margin-top: 6px; }
+
+    .geo { --c: var(--geo); }
+    .pry { --c: var(--pry); }
+    .math { --c: var(--math); }
+
+    @media (max-width: 620px) {
+      main { padding-top: 28px; }
+      h1 { font-size: 27px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>📚 Мої предмети</h1>
+    <p class="lead">Обери курс. Прогрес у кожному зберігається окремо.</p>
+
+    <!-- Посилання абсолютні: сторінка працює і онлайн, і з file:// при подвійному кліку.
+         Новий курс — ще один <li> за зразком. -->
+    <ul class="subjects">
+      <li>
+        <a class="subject geo" href="https://liza-school.github.io/geografia-6/">
+          <span class="icon">🌍</span>
+          <span class="name">Географія, 6 клас</span>
+          <span class="about">Конспект за підручником Кобернік і Коваленко (2023): пояснення, малюнки, питання з автоперевіркою.</span>
+          <span class="go">Відкрити →</span>
+        </a>
+      </li>
+      <li>
+        <a class="subject pry" href="https://liza-school.github.io/pryroda-6/">
+          <span class="icon">⚡</span>
+          <span class="name">Пізнаємо природу, 6 клас</span>
+          <span class="about">Конспект за підручником Д. Д. Біди (2023): електрика, світло, тести після кожного блоку.</span>
+          <span class="go">Відкрити →</span>
+        </a>
+      </li>
+      <li>
+        <a class="subject math" href="https://liza-school.github.io/chyslomahiya/">
+          <span class="icon">🪄</span>
+          <span class="name">Числомагія</span>
+          <span class="about">Математика у Гоґвортсі: терези, задачі й самоперевірка.</span>
+          <span class="go">Відкрити →</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
