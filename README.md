@@ -10,6 +10,7 @@
 | ⚡ Пізнаємо природу, 6 клас | [pryroda-6](https://github.com/liza-school/pryroda-6) |
 | 📖 Зарубіжна література, 6 клас | [zarlit-6](https://github.com/liza-school/zarlit-6) |
 | 🛡️ Здоров’я, безпека та добробут, 6 клас | [zbd-6](https://github.com/liza-school/zbd-6) |
+| 🏺 Історія, 6 клас | [istoriya-6](https://github.com/liza-school/istoriya-6) |
 | 🪄 Числомагія | [chyslomahiya](https://github.com/liza-school/chyslomahiya) |
 
 Новий курс — ще один `<li>` в `index.html` за зразком і рядок у цій таблиці. У самому курсі
